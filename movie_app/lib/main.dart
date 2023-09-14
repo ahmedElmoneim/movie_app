@@ -5,6 +5,7 @@ import 'package:movie_app/HomePage.dart';
 void main() {
   runApp(const MyApp());
 }
+
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -15,25 +16,20 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   void initState() {
-
     // TODO: implement initState
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     super.initState();
-
   }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-
         scaffoldBackgroundColor: Colors.black,
       ),
-      routes: {
-        "/":(context)=>HomePage()
-      },
-
+      routes: {"/": (context) => HomePage()},
     );
   }
 }

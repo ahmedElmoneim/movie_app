@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
       child: Container(
         decoration: const BoxDecoration(
           color: Colors.black,
-          image:DecorationImage(
+          image: DecorationImage(
             image: AssetImage("images/background.jpeg"),
             fit: BoxFit.cover,
             opacity: 0.4,
@@ -20,28 +20,36 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("DP Cineplex",
-            style:TextStyle(
-              color: Colors.white,
-              fontSize: 50,
-              fontWeight: FontWeight.bold,
-              fontStyle: FontStyle.italic,
+            Text(
+              "DP Cineplex",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 50,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+              ),
             ),
+            SizedBox(
+              height: 30,
             ),
-            SizedBox(height: 30,),
-            Text("Grap your Tickets now",style: TextStyle(
-              fontSize: 20,
-              color: Colors.white70,
-              fontWeight: FontWeight.bold,
+            Text(
+              "Grap your Tickets now",
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white70,
+                fontWeight: FontWeight.bold,
+              ),
             ),
+            SizedBox(
+              height: 50,
             ),
-            SizedBox(height: 50,),
             InkWell(
               onTap: () {
-Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()));
               },
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 15,horizontal: 25),
+                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 25),
                 decoration: BoxDecoration(
                   color: Color(0xFFF7D300).withOpacity(.9),
                   borderRadius: BorderRadius.circular(10),
@@ -56,8 +64,6 @@ Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
                 ),
               ),
             ),
-
-
           ],
         ),
       ),
